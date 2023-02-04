@@ -741,6 +741,13 @@ button,
   margin: 0;
   padding: 0;
   list-style: none;
+  display: -ms-grid;
+  display: grid;
+  width: 50%;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
 }
 
 .section h2 {
@@ -1200,6 +1207,19 @@ button,
   color: #FFD180;
 }
 
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.footer__nav a {
+  display: block;
+}
+
 .footer__copyright {
   background-color: #293449;
   padding: 10px;
@@ -1213,6 +1233,28 @@ button,
 
 .footer__copyright :last-child {
   margin-left: auto;
+}
+
+.footer__column p {
+  text-align: right;
+}
+
+.footer__column label {
+  display: block;
+}
+
+.footer__column input {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 10px;
+  border: 1px solid #63A63E;
+  border-radius: 2px;
+  background-color: #63A63E;
+  background-image: url("../../img/sprite/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: center;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
