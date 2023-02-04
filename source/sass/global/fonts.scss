@@ -11,11 +11,44 @@
 
 @font-face {
   font-style: normal;
-  font-weight: 400;
-  font-family: "";
+  font-weight: 700;
+  font-family: "PT Sans Bold";
 
   font-display: swap;
   src:
-    url("../fonts/.woff2") format("woff2"),
-    url("../fonts/.woff") format("woff");
+    url("../fonts/pt-sans-700.woff2") format("woff2"),
+    url("../fonts/pt-sans-700.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "PT Sans Regular";
+
+  font-display: swap;
+  src:
+    url("../fonts/pt-sans-regular.woff2") format("woff2"),
+    url("../fonts/pt-sans-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: 400;
+  font-family: "PT Sans Italic";
+
+  font-display: swap;
+  src:
+    url("../fonts/pt-sans-italic.woff2") format("woff2"),
+    url("../fonts/pt-sans-italic.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Fira Sans Bold";
+
+  font-display: swap;
+  src:
+    url("../fonts/fira-sans-700.woff2") format("woff2"),
+    url("../fonts/fira-sans-700.woff") format("woff");
 }

@@ -1,0 +1,24 @@
+.footer {
+  background-color: $color-basic-grey-hover;
+  color: $color-default-white;
+
+  a {
+    color: $color-special-yellowlight;
+  }
+}
+
+.footer__copyright {
+  background-color: $color-basic-grey-click;
+  padding: 10px;
+
+  div {
+    display: flex;
+
+  }
+
+  :last-child {
+    margin-left: auto;
+  }
+
+
+}

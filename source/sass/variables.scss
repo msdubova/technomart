@@ -5,6 +5,7 @@
 
 $color-default-black:               #000000;
 $color-default-white:               #ffffff;
+$color-default-red:                 #EE3643;
 $color-transparent:                 rgba(255, 255, 255, 0);
 
 // Project palette
@@ -13,6 +14,31 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 $color-neon-blue:                   #2c39f2;
 $color-torch-red:                   #ff1553;
 
+$color-darkblue: #293449;
+$color-blue: #3D546F;
+
+
+
+// basic
+$color-basic-red : #EE3643;
+$color-basic-red-hover: #CA2C37;
+$color-basic-red-click : #BA2732;
+$color-basic-green: #63A63E;
+$color-basic-green-hover: #5FBB2D;
+$color-basic-green-click : #518534;
+$color-basic-grey : #3D546F;
+$color-basic-grey-hover : #32425C;
+$color-basic-grey-click : #293449;
+$color-basic-greylight: #C5C5C5;
+$color-basic-background: #F1F5F7;
+$color-basic-beige-background: #F9F5F0;
+// special
+$color-special-blue: #3BBCE3;
+$color-special-lilac: #DC91D8;
+$color-special-greenlight: #8ED78F;
+$color-special-yellowlight: #FFD180;
+$color-special-yellow: #FFBF47;
+$color-special-white: #F9F5F0;
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
@@ -56,3 +82,5 @@ $vp-1920:                           1920px;
 
 $retina-dpi:                        144dpi;
 $retina-dppx:                       1.5dppx;
+
+$vp-1200: 1200px;

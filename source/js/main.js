@@ -1,6 +1,15 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+import { iosVhFix } from './utils/ios-vh-fix';
+import { initModals } from './modules/modals/init-modals';
+// import Swiper bundle with all modules installed
 
+// core version + navigation, pagination modules:
+import Swiper, { Navigation, Pagination } from 'swiper';
+
+
+// import Swiper and modules styles
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -20,6 +29,28 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const swiper = new Swiper('.swiper', {
+  modules: [Navigation, Pagination],
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  Pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  Navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.

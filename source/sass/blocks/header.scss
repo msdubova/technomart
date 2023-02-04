@@ -1,0 +1,86 @@
+.header {
+  h1 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "PT Sans Italic";
+    color: $color-default-red;
+  }
+
+  ul {
+    display: flex;
+
+    @include reset-ul;
+  }
+}
+
+.header__contacts {
+  font-size: 14px;
+  line-height: 18px;
+
+  li {
+    padding: 12px;
+
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  a {
+
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "PT Sans Bold";
+    color: $color-darkblue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: " ";
+      // background-color: aqua;
+      background-image: url("/img/sprite/icon-phone.svg");
+      width: 16px;
+      height: 16px;
+
+
+    }
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.header__filter {
+  background-color: $color-darkblue;
+}
+
+.header__map {
+  background-color: $color-blue;
+
+
+}
+
+.header__login {
+  margin-left: auto;
+}
+
+.header__user {
+  margin-left: auto;
+}
+
+.header__nav {
+  li {
+    margin-right: 20px;
+  }
+  a {
+    line-height: 24px;
+    color: $color-default-white;
+  }
+
+}

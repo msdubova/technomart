@@ -1,0 +1,7 @@
+.nav {    display: flex;
+align-items: center;
+  ul {
+
+    @include reset-ul;
+  }
+}

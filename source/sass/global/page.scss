@@ -1,0 +1,55 @@
+.page {
+  box-sizing: border-box;
+  min-width: 320px;
+  height: 100%;
+
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: $color-default-black;
+  letter-spacing: 0;
+
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.page__main {
+  flex-grow: 1;
+}
+
+.page a,
+.page input,
+.page button {
+  &:hover {
+    outline: 3px solid $color-default-white;
+    opacity: 0.8;
+
+    @include vp-767 {
+      outline: none;
+    }
+  }
+
+  &:focus {
+    outline: 3px solid $color-default-white;
+  }
+
+  &:active {
+    outline: 3px solid $color-default-white;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+  }
+}
+
+.page a,
+.page button {
+  user-select: none;
+}
