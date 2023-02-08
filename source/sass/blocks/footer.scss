@@ -5,6 +5,11 @@
   a {
     color: $color-special-yellowlight;
   }
+
+
+  ul {
+    @include reset-ul();
+  }
 }
 
 
@@ -12,11 +17,13 @@
 .footer__nav {
   display: flex;
   justify-content: space-between;
+
   a {
     display: block;
 
   }
 }
+
 .footer__copyright {
   background-color: $color-basic-grey-click;
   padding: 10px;
@@ -35,29 +42,29 @@
 
 .footer__column {
 
-    p{
+  p {
     text-align: right;
 
   }
 
-label {
-  display: block;
-}
+  label {
+    display: block;
+  }
 
- input{
+  input {
 
-font-weight: 400;
-font-size: 14px;
-line-height: 18px;
-padding: 10px;
-border: 1px solid $color-basic-green;
-border-radius: 2px;
-background-color: $color-basic-green;
-background-image:url("../../img/sprite/icon-cart.svg");
-background-repeat: no-repeat;
-background-position-x: right;
-background-position-y: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 10px;
+    border: 1px solid $color-basic-green;
+    border-radius: 2px;
+    // background-color: $color-basic-green;
+    background-image: url("../../img/svg/icon-cart.svg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
 
 
-}
+  }
 }

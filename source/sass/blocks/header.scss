@@ -5,6 +5,7 @@
     line-height: 18px;
     font-family: "PT Sans Italic";
     color: $color-default-red;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   ul {
@@ -28,7 +29,7 @@
   }
 
   a {
-
+    padding-left: 20px;
     font-weight: 700;
     font-size: 16px;
     font-family: "PT Sans Bold";
@@ -40,11 +41,10 @@
     &::before {
       position: absolute;
       content: " ";
-      // background-color: aqua;
       background-image: url("/img/sprite/icon-phone.svg");
       width: 16px;
       height: 16px;
-
+      left: 0;
 
     }
   }
@@ -55,9 +55,64 @@
   justify-content: space-between;
 }
 
+.header__logo {
+  user-select: none;
+}
 
 .header__filter {
   background-color: $color-darkblue;
+
+  label {
+    position: relative;
+
+    &::after {
+      top: 30%;
+      left: 10px;
+      position: absolute;
+      content: " ";
+      width: 20px;
+      height: 20px;
+      background-image: url("../../img/sprite/icon-search.svg");
+    }
+  }
+
+  input {
+    padding-left: 40px;
+    background-color: inherit;
+    border: none;
+    color: $color-default-white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    color: $color-basic-background;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+
+    &:link {
+      padding-left: 25px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: " ";
+        width: 16px;
+        height: 16px;
+        background-image: url("../../img/sprite/icon-login.svg");
+        left: 0;
+      }
+    }
+
+  }
 }
 
 .header__map {
@@ -72,13 +127,27 @@
 
 .header__user {
   margin-left: auto;
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+  }
+
+  a {
+    padding: 10px;
+
+  }
 }
 
 .header__nav {
   li {
+
     margin-right: 20px;
+
   }
-  a {
+
+  a {  border-radius: 3px;padding: 10px;
     line-height: 24px;
     color: $color-default-white;
   }
