@@ -1277,14 +1277,6 @@ button,
   line-height: 24px;
 }
 
-.service__item {
-  background-repeat: no-repeat;
-}
-
-.service__item--delivery {
-  background-image: url("../../img/svg/icon-paints.svg");
-}
-
 .footer {
   background-color: #32425C;
   color: #ffffff;
