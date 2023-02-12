@@ -1,0 +1,26 @@
+.pagination {
+
+  @include reset-ul();
+  display: flex;
+  width: 436px;
+  align-self: center;
+
+  li {
+    width: 50px;
+    height: 45px;
+    display: grid;
+    grid-template-columns: 1;
+    margin-right: 10px;
+
+
+  }
+
+  a {
+
+
+    background-color: $color-basic-grey;
+    color: $color-default-white;
+
+  }
+
+}
