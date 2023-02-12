@@ -1370,9 +1370,30 @@ button,
 }
 
 .shop__catalog li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 10px;
   border: 1px solid #EAEAEA;
   border-radius: 2px;
+}
+
+.shop__catalog span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  -webkit-text-decoration-line: line-through;
+  text-decoration-line: line-through;
+  text-transform: uppercase;
+  color: #A9A9A9;
 }
 
 .service {
