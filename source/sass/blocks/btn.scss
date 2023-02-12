@@ -27,7 +27,6 @@
 
   &--green {
     background-color: $color-basic-green;
-
   }
 
   &--special {
@@ -37,9 +36,12 @@
     width: 138px;
     height: 40px;
     text-align: center;
+  }
 
-
-
+  &--greenborder {
+    background-color: inherit;
+    border: 2px solid $color-basic-green;
+    color: inherit;
   }
 
 

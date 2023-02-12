@@ -727,6 +727,10 @@ button,
   list-style: none;
 }
 
+.catalog__item {
+  position: relative;
+}
+
 .catalog__item--new {
   position: relative;
 }
@@ -739,6 +743,30 @@ button,
   right: 0;
   content: "";
   background-image: url("/img/sprite/icon-new.svg");
+}
+
+.catalog__controls {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 40px 35px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.catalog__item:hover picture {
+  opacity: 0.3;
+}
+
+.catalog__item:hover .catalog__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .socials {
@@ -800,6 +828,12 @@ button,
   width: 138px;
   height: 40px;
   text-align: center;
+}
+
+.btn--greenborder {
+  background-color: inherit;
+  border: 2px solid #63A63E;
+  color: inherit;
 }
 
 .btn:disabled {
