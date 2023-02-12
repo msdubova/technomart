@@ -948,7 +948,9 @@ button,
 .header__contacts a::before {
   position: absolute;
   content: " ";
-  background-image: url("/img/sprite/icon-phone.svg");
+  -webkit-mask-image: url("/img/sprite/icon-phone.svg");
+  mask-image: url("/img/sprite/icon-phone.svg");
+  background-color: #293449;
   width: 16px;
   height: 16px;
   left: 0;
@@ -972,6 +974,7 @@ button,
 
 .header__filter {
   background-color: #293449;
+  height: 45px;
 }
 
 .header__filter label {
@@ -985,7 +988,10 @@ button,
   content: " ";
   width: 20px;
   height: 20px;
-  background-image: url("../../img/sprite/icon-search.svg");
+  background-color: #ffffff;
+  opacity: 0.3;
+  -webkit-mask-image: url("../../img/sprite/icon-search.svg");
+  mask-image: url("../../img/sprite/icon-search.svg");
 }
 
 .header__filter input {
@@ -1014,7 +1020,7 @@ button,
 }
 
 .header__filter a:link {
-  padding-left: 25px;
+  padding-left: 30px;
   position: relative;
 }
 
@@ -1023,7 +1029,11 @@ button,
   content: " ";
   width: 16px;
   height: 16px;
-  background-image: url("../../img/sprite/icon-login.svg");
+  background-color: #ffffff;
+  -webkit-mask-size: 16px 16px;
+  mask-size: 16px 16px;
+  -webkit-mask-image: url("../../img/sprite/icon-login.svg");
+  mask-image: url("../../img/sprite/icon-login.svg");
   left: 0;
 }
 
@@ -1037,6 +1047,10 @@ button,
 
 .header__user {
   margin-left: auto;
+}
+
+.header__user svg {
+  fill: #ffffff;
 }
 
 .header__user li {
@@ -1132,6 +1146,7 @@ button,
 }
 
 .main__item {
+  border-radius: 2px;
   background-color: #FFBF47;
   padding: 25px;
   display: -webkit-box;
@@ -1142,7 +1157,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   background-repeat: no-repeat;
-  background-position-x: right;
+  background-position-x: 90%;
   background-position-y: center;
 }
 
@@ -1166,21 +1181,21 @@ button,
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: post-1;
-  background-image: url("../../img/svg/icon-paints.svg");
+  background-image: url("../../img/sprite/icon-paints.svg");
 }
 
 .main__item--instrument {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: post-2;
-  background-image: url("../../img/svg/icon-instrument.svg");
+  background-image: url("../../img/sprite/icon-instrument.svg");
 }
 
 .main__item--technics {
   -ms-grid-row: 1;
   -ms-grid-column: 5;
   grid-area: post-3;
-  background-image: url("../../img/svg/icon-equipment.svg");
+  background-image: url("../../img/sprite/icon-equipment.svg");
 }
 
 .main__item--slider {
@@ -1195,18 +1210,153 @@ button,
   -ms-grid-row: 3;
   -ms-grid-column: 5;
   grid-area: post-5;
-  background-image: url("../../img/svg/icon-sale.svg");
+  background-image: url("../../img/sprite/icon-sale.svg");
 }
 
 .main__item--delivery {
   -ms-grid-row: 5;
   -ms-grid-column: 5;
   grid-area: post-6;
-  background-image: url("../../img/svg/icon-delivery.svg");
+  background-image: url("../../img/sprite/icon-delivery.svg");
 }
 
 .shop {
   border-color: aqua;
+}
+
+.shop__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shop__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-right: 80px;
+  width: 220px;
+}
+
+.shop__filter input[type='checkbox'] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+.shop__filter input[type='checkbox'] + label {
+  padding-left: 30px;
+  position: relative;
+}
+
+.shop__filter input[type='checkbox'] + label::before {
+  position: absolute;
+  content: " ";
+  width: 20px;
+  height: 20px;
+  border: 2px solid #3D546F;
+  left: 0;
+  border-radius: 2px;
+}
+
+.shop__filter input[type='checkbox']:checked + label::after {
+  position: absolute;
+  content: " ";
+  width: 20px;
+  height: 20px;
+  left: 0;
+  background-image: url("../img/sprite/icon-checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.shop__filter input[type='radio'] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+.shop__filter input[type='radio'] + label {
+  padding-left: 30px;
+  position: relative;
+}
+
+.shop__filter input[type='radio'] + label::before {
+  position: absolute;
+  content: " ";
+  width: 20px;
+  height: 20px;
+  border: 2px solid #3D546F;
+  left: 0;
+  border-radius: 50%;
+}
+
+.shop__filter input[type='radio']:checked + label::after {
+  position: absolute;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 5px;
+  top: 5px;
+  background-color: #3D546F;
+  background-position: center;
+}
+
+.shop__filter label {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.shop__catalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.shop__catalog ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 29px;
+}
+
+.shop__catalog li {
+  padding: 10px;
+  border: 1px solid #EAEAEA;
+  border-radius: 2px;
 }
 
 .service {
@@ -1235,6 +1385,10 @@ button,
   background-image: url("../../img/svg/background.svg");
 }
 
+.service svg {
+  fill: #CA2C37;
+}
+
 .service h2 {
   text-align: center;
 }
@@ -1255,7 +1409,6 @@ button,
 
 .service li {
   background-color: #ffffff;
-  background-color: aqua;
   padding: 24px;
   -webkit-box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
@@ -1335,7 +1488,7 @@ button,
   padding: 10px;
   border: 1px solid #63A63E;
   border-radius: 2px;
-  background-image: url("../../img/svg/icon-cart.svg");
+  background-image: url("../../img/sprite/icon-cart-green.svg");
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: center;

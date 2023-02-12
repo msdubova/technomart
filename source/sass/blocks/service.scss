@@ -23,6 +23,9 @@
     background-image: url("../../img/svg/background.svg");
   }
 
+  svg {
+    fill: $color-basic-red-hover;
+  }
   h2 {
     text-align: center;
   }
@@ -39,7 +42,7 @@
 
   li {
     background-color: $color-default-white;
-    background-color: aqua;
+
     padding: 24px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
     border-radius: 2px;

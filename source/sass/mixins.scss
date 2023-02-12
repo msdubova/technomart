@@ -1,5 +1,7 @@
 @mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
     @content;
   }
 }
@@ -108,6 +110,91 @@
   clip-path: inset(100%);
 }
 
+@mixin checkbox () {
+  input[type='checkbox'] {
+    @include visually-hidden();
+
+    &+label {
+      padding-left: 30px;
+      position: relative;
+
+
+      &::before {
+        position: absolute;
+        content: " ";
+        width: 20px;
+        height: 20px;
+        border: 2px solid $color-basic-grey;
+        left: 0;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  input[type='checkbox']:checked {
+    &+label {
+      &::after {
+        position: absolute;
+        content: " ";
+        width: 20px;
+        height: 20px;
+
+        left: 0;
+
+        background-image: url("../img/sprite/icon-checkbox.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+
+
+}
+
+@mixin radio () {
+  input[type='radio'] {
+    @include visually-hidden();
+
+    &+label {
+      padding-left: 30px;
+      position: relative;
+
+
+      &::before {
+        position: absolute;
+        content: " ";
+        width: 20px;
+        height: 20px;
+        border: 2px solid $color-basic-grey;
+        left: 0;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  input[type='radio']:checked {
+    &+label {
+      &::after {
+        position: absolute;
+        content: " ";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+
+left: 5px;
+top: 5px;
+
+        background-color: $color-basic-grey;
+        background-position: center;
+
+      }
+    }
+  }
+
+
+
+}
 @mixin vp-1200 {
   @media (min-width: $vp-1200) {
     @content;

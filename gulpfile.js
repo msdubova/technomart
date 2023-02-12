@@ -56,13 +56,17 @@ const sprite = () => {
   return gulp.src('source/img/sprite/*.svg')
       .pipe(svgstore({inlineSvg: true}))
       .pipe(rename('sprite_auto.svg'))
-      .pipe(gulp.dest('source/img'));
+      .pipe(gulp.dest('build/img'));
 };
 
 const copySvg = () => {
-  return gulp.src('source/img/**/*.svg', {base: 'source'})
-      .pipe(gulp.dest('build'));
-};
+    return gulp.src('source/img/**/*.svg', {base: 'source'})
+        .pipe(gulp.dest('build'));
+  };
+// const copySvg = () => {
+//   return gulp.src('source/img/**/*.svg', {base: 'source'})
+//       .pipe(gulp.dest('build'));
+// };
 
 // const copySvg = () => {
 //   return gulp.src('source/img/*.svg', {base: 'source'})

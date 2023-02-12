@@ -1,3 +1,43 @@
 .shop {
-border-color: aqua;
+  border-color: aqua;
+}
+
+.shop__container {
+  display: flex;
+}
+
+.shop__filter {
+  display: flex;
+  flex-direction: column;
+  margin-right: 80px;
+  width: 220px;
+
+  @include checkbox();
+  @include radio();
+
+  label {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+.shop__catalog {
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    @include reset-ul ();
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 29px;
+  }
+
+  li {
+    padding: 10px;
+    border: 1px solid #EAEAEA;
+    border-radius: 2px;
+  }
 }

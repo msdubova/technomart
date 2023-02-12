@@ -41,7 +41,8 @@
     &::before {
       position: absolute;
       content: " ";
-      background-image: url("/img/sprite/icon-phone.svg");
+      mask-image: url("/img/sprite/icon-phone.svg");
+      background-color: $color-basic-grey-click;
       width: 16px;
       height: 16px;
       left: 0;
@@ -61,6 +62,7 @@
 
 .header__filter {
   background-color: $color-darkblue;
+  height: 45px;
 
   label {
     position: relative;
@@ -72,7 +74,10 @@
       content: " ";
       width: 20px;
       height: 20px;
-      background-image: url("../../img/sprite/icon-search.svg");
+      background-color: $color-default-white;
+      opacity: 0.3;
+
+      mask-image: url("../../img/sprite/icon-search.svg");
     }
   }
 
@@ -99,7 +104,7 @@
 
 
     &:link {
-      padding-left: 25px;
+      padding-left: 30px;
       position: relative;
 
       &::before {
@@ -107,8 +112,14 @@
         content: " ";
         width: 16px;
         height: 16px;
-        background-image: url("../../img/sprite/icon-login.svg");
+        background-color: $color-default-white;
+        // background-size: contain;
+        mask-size: 16px 16px;
+        mask-image: url("../../img/sprite/icon-login.svg");
+        // background-image: url("../../img/sprite/icon-login.svg");
+
         left: 0;
+
       }
     }
 
@@ -127,6 +138,10 @@
 
 .header__user {
   margin-left: auto;
+
+  svg {
+    fill: $color-default-white;
+  }
 
   li {
     display: flex;
@@ -147,7 +162,9 @@
 
   }
 
-  a {  border-radius: 3px;padding: 10px;
+  a {
+    border-radius: 3px;
+    padding: 10px;
     line-height: 24px;
     color: $color-default-white;
   }
