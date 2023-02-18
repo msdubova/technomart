@@ -1,6 +1,6 @@
 .shop {
 
-  margin-bottom: 50px;
+
 }
 
 .shop__container {
@@ -26,6 +26,7 @@
 .shop__catalog {
   display: flex;
   flex-direction: column;
+
 
   select {
     margin-bottom: 30px;
@@ -86,3 +87,9 @@
   }
 }
 
+.shop__pagination {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

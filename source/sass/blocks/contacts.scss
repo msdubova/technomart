@@ -1,0 +1,9 @@
+.contacts {
+  .contacts__block {
+    display: grid;
+    
+    grid-template-columns: auto 500px;
+    grid-column-gap: 100px;
+  }
+  
+}

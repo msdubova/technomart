@@ -59,7 +59,8 @@
           <!-- <svg width="16" height="16">
             <use href="./img/sprite_auto.svg#icon-login"></use>
           </svg> -->
-          Войти </a>
+          Войти
+        </a>
       </div>
     </div>
     <div class="header__map">
@@ -217,7 +218,20 @@
           <div class="shop__filter">
             <h3>Цена</h3>
 
-            <input type="range" name="price" id="pricerange" min="0" max="30000">
+            <div class="range-slide">
+              <div class="slide">
+                <div class="line" id="line" style="left: 0%; right: 0%;"></div>
+                <span class="thumb" id="thumbMin" style="left: 0%;"></span>
+                <span class="thumb" id="thumbMax" style="left: 100%;"></span>
+              </div>
+              <input id="rangeMin" type="range" max="100" min="10" step="5" value="0">
+              <input id="rangeMax" type="range" max="100" min="10" step="5" value="100">
+            </div>
+            <div class="display">
+              <span id="min">10</span>
+              <span id="max">100</span>
+            </div>
+            
 
 
             <input type="checkbox" name="check-bosch" id="bosch" />
@@ -434,31 +448,35 @@
                 <a href="" class="btn btn--special">15500 ₽</a>
               </li>
             </ul>
-            <ul class="pagination">
-<li>
-  <a href="">
-    1
-  </a>
-</li>
-<li>
-  <a href="">
-    2
-  </a>
-</li>
-<li>
-  <a href="">
-   3
-  </a>
-</li>
-<li>
-  <a href="">
-    4
-  </a>
-</li>
-<li>
-  <a href="" class="btn">показать еще</a>
-</li>
-            </ul>
+            <div class="shop__pagination">
+              <ul class="pagination">
+                <li>
+                  <a href="">
+                    1
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    2
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    3
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    4
+                  </a>
+                </li>
+
+                <!-- <a href="" class="btn">показать еще</a> -->
+
+              </ul>
+              <button class="btn">показать еще</button>
+            </div>
+
           </div>
         </div>
 
@@ -515,31 +533,36 @@
       </section>
 
 
-      <section class="section section--column">
-        <h2>
-          КОМПАНИЯ «Техномарт»
-        </h2>
-        <p>
-          Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит
-          равнодушными любителей сэкономить на гастарбайтерах.
+      <section class="section contacts">
+        <div class="contacts__block">
+          <div>
+            <h2>
+              КОМПАНИЯ «Техномарт»
+            </h2>
+            <p>
+              Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит
+              равнодушными любителей сэкономить на гастарбайтерах.
 
-          Мы можем доставить ваш товар в самые отдаленные точки России!
-          Техномарт работает со многими транспортными компаниями:
-        </p>
-        <a class="button" href="">
-          о компании
-        </a>
+              Мы можем доставить ваш товар в самые отдаленные точки России!
+              Техномарт работает со многими транспортными компаниями:
+            </p>
+            <a class="button" href="">
+              о компании
+            </a>
+          </div>
+          <div>
+            <h2>
+              КОНТАКТЫ
+            </h2>
+            <p>
+              Вы можете забрать товар сами, заехав в наш офис:
+            </p>
+          </div>
+        </div>
+
       </section>
 
-      <section class="section section--column" id="map">
-        <h2>
-          КОНТАКТЫ
-        </h2>
-        <p>
-          Вы можете забрать товар сами, заехав в наш офис:
-        </p>
 
-      </section>
 
 
     </div>
