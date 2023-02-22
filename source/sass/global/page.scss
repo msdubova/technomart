@@ -29,7 +29,7 @@
 .page button {
   &:hover {
     outline: 3px solid $color-default-white;
-    opacity: 0.8;
+    // opacity: 0.8;
 
     @include vp-767 {
       outline: none;
@@ -49,10 +49,10 @@
   }
 }
 
-.page a,
-.page button {
-  user-select: none;
-}
+// .page a,
+// .page button {
+//   user-select: none;
+// }
 
 .page svg {
   display: block;

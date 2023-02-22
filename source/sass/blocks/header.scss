@@ -164,9 +164,23 @@
 
   a {
     border-radius: 3px;
-    padding: 10px;
+    padding: 15px;
     line-height: 24px;
     color: $color-default-white;
+
+    &:hover,
+    :focus {
+      color:$color-basic-greylight;
+      outline: none;
+      background-color: $color-basic-grey-hover;
+    }
+
+    &:active {
+      color:$color-default-white;
+      outline: none;
+      background-color: $color-basic-grey-hover;
+      // font-weight: 700;
+    }
   }
 
 }

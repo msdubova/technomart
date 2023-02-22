@@ -1,12 +1,17 @@
 .range {
   margin-bottom: 30px;
+
+  input {
+    @include visually-hidden();
+  }
 }
+
 .range__block {
   position: relative;
-background: #F7F3EC;
+  background: #F7F3EC;
   height: 40px;
   width: 220px;
-border-radius: 2px;
+  border-radius: 2px;
 
   margin-bottom: 6.3px;
 }
@@ -14,7 +19,7 @@ border-radius: 2px;
 .range__slide {
 
   position: absolute;
-  width:80%;
+  width: 80%;
   top: 50%;
   height: 2px;
   background: $color-basic-grey;
@@ -44,8 +49,9 @@ border-radius: 2px;
   height: 18px;
   width: 18px;
   margin-left: -9px;
+
   &:last-of-type {
-    left:80%;
+    left: 80%;
   }
 }
 
@@ -56,7 +62,7 @@ border-radius: 2px;
   height: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap:30px;
+  grid-column-gap: 30px;
 
 
   &::after {
@@ -68,6 +74,7 @@ border-radius: 2px;
     top: 50%;
     left: 48%;
   }
+
   span {
     font-family: 'PT Sans Regular';
     background: #F7F3EC;
@@ -76,7 +83,4 @@ border-radius: 2px;
     padding-top: 8px;
     border-radius: 2px;
   }
-}
-input {
-  @include visually-hidden();
 }

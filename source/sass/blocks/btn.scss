@@ -1,5 +1,12 @@
 .btn {
-
+  &:hover, 
+  :focus {
+    background-color: $color-basic-red-hover;
+  }
+  
+  &:active {
+    background-color: $color-basic-red-click;
+  }
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
@@ -23,25 +30,71 @@
     background-color: inherit;
     border: 2px solid $color-basic-grey;
     color: $color-basic-grey;
+
+    &:hover,
+    :focus {
+      background-color: inherit;
+      border-color: $color-basic-green-hover;
+   
+    }
+    &:active {
+      background-color: inherit;
+      border-color: $color-basic-greylight;
+      color: $color-basic-greylight;
+    }
   }
 
   &--green {
     background-color: $color-basic-green;
+
+    &:hover,
+    :focus {
+      background-color: $color-basic-green-hover;
+    }
+
+    &:active {
+      background-color: $color-basic-green-click;
+    }
   }
 
   &--special {
+  
     background-color: inherit;
     background-image: url("../../img/svg/shape.svg");
     display: block;
     width: 138px;
     height: 40px;
     text-align: center;
+
+    &:hover,
+    :focus {
+      background: url("../../img/svg/shape-hover.svg");
+      
+     
+    }
+
+    &:active{
+      background: url("../../img/svg/shape-click.svg");
+    }
   }
 
   &--greenborder {
     background-color: inherit;
     border: 2px solid $color-basic-green;
     color: inherit;
+    &:hover,
+    :focus {
+      border-color: $color-basic-grey;
+      background-color: inherit;
+      outline: none;
+    }
+
+    &:active {
+      border-color: $color-basic-greylight;
+      color: $color-basic-greylight;
+      background-color: inherit;
+      outline: none;
+    }
   }
 
 
@@ -52,12 +105,12 @@
   }
 
 
-  @media (hover: hover),
-  screen and (min-width: 0\0) {
+  // @media (hover: hover),
+  // screen and (min-width: 0\0) {
 
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
-  }
+  //   &:hover,
+  //   &:focus {
+  //     opacity: 0.8;
+  //   }
+  // }
 }
