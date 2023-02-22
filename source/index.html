@@ -165,16 +165,16 @@
               для стройки
             </a>
           </li>
-          <!-- Slider main container -->
-          <li class="main__item main__item--slider main__slider swiper">
+          <!-- range__slider main container -->
+          <li class="main__item main__item--range__slider main__range__slider swiper">
 
 
             <!-- Additional required wrapper -->
             <div class="swiper-container">
-              <!-- Slides -->
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
+              <!-- range__slides -->
+              <div class="swiper-range__slide">range__slide 1</div>
+              <div class="swiper-range__slide">range__slide 2</div>
+              <div class="swiper-range__slide">range__slide 3</div>
 
             </div>
             <!-- If we need pagination -->
@@ -218,267 +218,271 @@
           <div class="shop__filter">
             <h3>Цена</h3>
 
-            <div class="range-slide">
-              <div class="slide">
-                <div class="line" id="line" style="left: 0%; right: 0%;"></div>
-                <span class="thumb" id="thumbMin" style="left: 0%;"></span>
-                <span class="thumb" id="thumbMax" style="left: 100%;"></span>
+            <div class="range">
+              <div class="range__block">
+                <div class="range__slide">
+                  <div class="range__line" id="line"></div>
+                  <span class="range__thumb" id="thumbMin"></span>
+                  <span class="range__thumb" id="thumbMax""></span>
+                </div>
+                <input id=" rangeMin" type="range" max="100" min="10" step="5" value="0">
+                    <input id="rangeMax" type="range" max="100" min="10" step="5" value="100">
+                </div>
+                <div class="range__display">
+                  <span id="min">0</span>
+                  <span id="max">30000</span>
+                </div>
               </div>
-              <input id="rangeMin" type="range" max="100" min="10" step="5" value="0">
-              <input id="rangeMax" type="range" max="100" min="10" step="5" value="100">
+
+
+
+
+              <h3>ПРОИЗВОДИТЕЛИ</h3>
+              <input type="checkbox" name="check-bosch" id="bosch" />
+
+              <label for="bosch">bosch</label>
+
+              <input type="checkbox" name="check-interscol" id="interscol" />
+              <label for="interscol">ИНТЕРСКОЛ</label>
+
+
+              <input type="checkbox" name="check-makita" id="makita" />
+
+              <label for="makita">MAKIta</label>
+
+              <input type="checkbox" name="check-dewalt" id="dewalt" />
+              <label for="dewalt">Dewalt</label>
+
+
+              <input type="checkbox" name="check-hitachi" id="hitachi" />
+              <label for="hitachi">Hitachi</label>
+
+              <h3>ПИТАНИЕ</h3>
+              <input type="radio" name="radio-charge" id="accumulator" value="accumulator">
+              <label for="accumulator">Аккумуляторные</label>
+              <input type="radio" name="radio-charge" id="cable" value="cable">
+              <label for="cable">Сетевые</label>
+
+              <button class="btn btn--white">Показать</button>
             </div>
-            <div class="display">
-              <span id="min">10</span>
-              <span id="max">100</span>
-            </div>
-            
-
-
-            <input type="checkbox" name="check-bosch" id="bosch" />
-
-            <label for="bosch">bosch</label>
-
-            <input type="checkbox" name="check-interscol" id="interscol" />
-            <label for="interscol">ИНТЕРСКОЛ</label>
-
-
-            <input type="checkbox" name="check-makita" id="makita" />
-
-            <label for="makita">MAKIta</label>
-
-            <input type="checkbox" name="check-dewalt" id="dewalt" />
-            <label for="dewalt">Dewalt</label>
-
-
-            <input type="checkbox" name="check-hitachi" id="hitachi" />
-            <label for="hitachi">Hitachi</label>
-
-            <h3>ПИТАНИЕ</h3>
-            <input type="radio" name="radio-charge" id="accumulator" value="accumulator">
-            <label for="accumulator">Аккумуляторные</label>
-            <input type="radio" name="radio-charge" id="cable" value="cable">
-            <label for="cable">Сетевые</label>
-
-            <button class="btn btn--white">Показать</button>
-          </div>
-          <div class="shop__catalog">
-            <select name="" id="">
-              <option value="">Сортировать</option>
-            </select>
-            <ul class="shop__list">
-              <li class="catalog__item catalog__item--new">
-                <div>
-                  <picture>
-                    <!-- 1x: 226x274; 2x: 452x548 -->
-                    <!-- <source type="image/webp" media="(max-width: 767px)"
+            <div class="shop__catalog">
+              <select name="" id="">
+                <option value="">Сортировать</option>
+              </select>
+              <ul class="shop__list">
+                <li class="catalog__item catalog__item--new">
+                  <div>
+                    <picture>
+                      <!-- 1x: 226x274; 2x: 452x548 -->
+                      <!-- <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/img-coaches-lavrov-desktop-2x.webp 2x, img/img-coaches-lavrov-desktop-1x.webp 1x"> -->
-                    <!-- 1x: 268x294; 2x: 536x588 -->
-                    <!-- <source type="image/webp" media="(max-width: 1199px)"
+                      <!-- 1x: 268x294; 2x: 536x588 -->
+                      <!-- <source type="image/webp" media="(max-width: 1199px)"
                     srcset="img/img-coaches-lavrov-tablet-2x.webp 2x, img/img-coaches-lavrov-tablet-1x.webp 1x"> -->
-                    <!-- 1x: 260x294; 2x: 520x588 -->
-                    <!-- <source type="image/webp"
+                      <!-- 1x: 260x294; 2x: 520x588 -->
+                      <!-- <source type="image/webp"
                     srcset="img/img-coaches-lavrov-desktop-2x.webp 2x, img/img-coaches-lavrov-desktop-1x.webp 1x"> -->
-                    <!-- 1x: 226x274; 2x: 452x548 -->
-                    <!-- <source media="(max-width: 767px)"
+                      <!-- 1x: 226x274; 2x: 452x548 -->
+                      <!-- <source media="(max-width: 767px)"
                     srcset="img/img-coaches-lavrov-desktop-2x.png 2x, img/img-coaches-lavrov-desktop-1x.png 1x"> -->
-                    <!-- 1x: 268x294; 2x: 536x588 -->
-                    <!-- <source media="(max-width: 1199px)"
+                      <!-- 1x: 268x294; 2x: 536x588 -->
+                      <!-- <source media="(max-width: 1199px)"
                     srcset="img/img-coaches-lavrov-tablet-2x.png 2x, img/img-coaches-lavrov-tablet-1x.png 1x"> -->
 
 
-                    <!-- 1x: 216x180; 2x: 432x360 -->
-                    <source type="image/webp"
-                      srcset="img/catalog/bosch-bfg-3000-2x.webp 2x, img/catalog/bosch-bfg-3000-1x.webp 1x">
-                    <!-- 1x: 216x180; 2x: 432x360 -->
-                    <img loading="lazy" width="216" height="180" srcset="img/catalog/bosch-bfg-3000-2x.png 2x"
-                      src="img/catalog/bosch-bfg-3000-1x.png" alt="bosch-bfg-3000">
-                  </picture>
+                      <!-- 1x: 216x180; 2x: 432x360 -->
+                      <source type="image/webp"
+                        srcset="img/catalog/bosch-bfg-3000-2x.webp 2x, img/catalog/bosch-bfg-3000-1x.webp 1x">
+                      <!-- 1x: 216x180; 2x: 432x360 -->
+                      <img loading="lazy" width="216" height="180" srcset="img/catalog/bosch-bfg-3000-2x.png 2x"
+                        src="img/catalog/bosch-bfg-3000-1x.png" alt="bosch-bfg-3000">
+                    </picture>
 
-                  <div class="catalog__controls">
-                    <button class="btn btn--green">
-                      купить
-                    </button>
-                    <button class="btn btn--greenborder">
-                      в закладки
-                    </button>
+                    <div class="catalog__controls">
+                      <button class="btn btn--green">
+                        купить
+                      </button>
+                      <button class="btn btn--greenborder">
+                        в закладки
+                      </button>
+                    </div>
                   </div>
-                </div>
 
-                <h4>
-                  Перфоратор BOSCH-BFG 3000
-                </h4>
-                <span>
-                  22500 ₽
-                </span>
-                <a href="" class="btn btn--special">15500 ₽</a>
-              </li>
-              <li class="catalog__item">
-                <div>
-                  <picture>
-                    <source type="image/webp"
-                      srcset="img/catalog/bosch-bfg-6000-2x.webp 2x, img/catalog/bosch-bfg-6000-1x.webp 1x">
-                    <!-- 1x: 216x180; 2x: 432x360 -->
-                    <img loading="lazy" width="216" height="180" srcset="img/catalog/bosch-bfg-6000-2x.png 2x"
-                      src="img/catalog/bosch-bfg-6000-1x.png" alt="bosch-bfg-6000">
-                  </picture>
-                  <div class="catalog__controls">
-                    <button class="btn btn--green">
-                      купить
-                    </button>
-                    <button class="btn btn--greenborder">
-                      в закладки
-                    </button>
-                  </div>
-                </div>
-
-                <h4>
-                  Перфоратор BOSCH-BFG 6000
-                </h4>
-                <span>
-                  22500 ₽
-                </span>
-                <a href="" class="btn btn--special">15500 ₽</a>
-              </li>
-              <li class="catalog__item catalog__item--new">
-                <div>
-                  <picture>
-                    <source type="image/webp"
-                      srcset="img/catalog/bosch-bfg-2000-2x.webp 2x, img/catalog/bosch-bfg-2000-1x.webp 1x">
-                    <!-- 1x: 216x180; 2x: 432x360 -->
-                    <img loading="lazy" width="216" height="180" srcset="img/catalog/bosch-bfg-2000-2x.png 2x"
-                      src="img/catalog/bosch-bfg-2000-1x.png" alt="bosch-bfg-2000">
-                  </picture>
-                  <div class="catalog__controls">
-                    <button class="btn btn--green">
-                      купить
-                    </button>
-                    <button class="btn btn--greenborder">
-                      в закладки
-                    </button>
-                  </div>
-                </div>
-
-                <h4>
-                  Перфоратор BOSCH-BFG 2000
-                </h4>
-                <span>
-                  22500 ₽
-                </span>
-                <a href="" class="btn btn--special">15500 ₽</a>
-              </li>
-              <li class="catalog__item">
-                <div>
-                  <picture>
-                    <source type="image/webp"
-                      srcset="img/catalog/bosch-bfg-1000-2x.webp 2x, img/catalog/bosch-bfg-1000-1x.webp 1x">
-                    <!-- 1x: 216x180; 2x: 432x360 -->
-                    <img loading="lazy" width="216" height="180" srcset="img/catalog/bosch-bfg-1000-2x.png 2x"
-                      src="img/catalog/bosch-bfg-1000-1x.png" alt="bosch-bfg-1000">
-                  </picture>
-                  <div class="catalog__controls">
-                    <button class="btn btn--green">
-                      купить
-                    </button>
-                    <button class="btn btn--greenborder">
-                      в закладки
-                    </button>
-                  </div>
-                </div>
-
-                <h4>
-                  Перфоратор BOSCH-BFG 1000
-                </h4>
-                <span>
-                  22500 ₽
-                </span>
-                <a href="" class="btn btn--special">15500 ₽</a>
-              </li>
-              <li class="catalog__item catalog__item--new">
-                <div>
-                  <picture>
-                    <source type="image/webp"
-                      srcset="img/catalog/bosch-bfg-4000-2x.webp 2x, img/catalog/bosch-bfg-4000-1x.webp 1x">
-                    <!-- 1x: 216x180; 2x: 432x360 -->
-                    <img loading="lazy" width="216" height="180" srcset="img/catalog/bosch-bfg-4000-2x.png 2x"
-                      src="img/catalog/bosch-bfg-4000-1x.png" alt="bosch-bfg-4000">
-                  </picture>
-                  <div class="catalog__controls">
-                    <button class="btn btn--green">
-                      купить
-                    </button>
-                    <button class="btn btn--greenborder">
-                      в закладки
-                    </button>
-                  </div>
-                </div>
-
-                <h4>
-                  Перфоратор BOSCH-BFG 4000
-                </h4>
-                <span>
-                  22500 ₽
-                </span>
-                <a href="" class="btn btn--special">15500 ₽</a>
-              </li>
-              <li class="catalog__item">
-                <div>
-                  <picture>
-                    <source type="image/webp"
-                      srcset="img/catalog/bosch-bfg-5000-2x.webp 2x, img/catalog/bosch-bfg-5000-1x.webp 1x">
-                    <!-- 1x: 216x180; 2x: 432x360 -->
-                    <img loading="lazy" width="216" height="180" srcset="img/catalog/bosch-bfg-5000-2x.png 2x"
-                      src="img/catalog/bosch-bfg-5000-1x.png" alt="bosch-bfg-5000">
-                  </picture>
-                  <div class="catalog__controls">
-                    <button class="btn btn--green">
-                      купить
-                    </button>
-                    <button class="btn btn--greenborder">
-                      в закладки
-                    </button>
-                  </div>
-                </div>
-
-                <h4>
-                  Перфоратор BOSCH-BFG 5000
-                </h4>
-                <span>
-                  22500 ₽
-                </span>
-                <a href="" class="btn btn--special">15500 ₽</a>
-              </li>
-            </ul>
-            <div class="shop__pagination">
-              <ul class="pagination">
-                <li>
-                  <a href="">
-                    1
-                  </a>
+                  <h4>
+                    Перфоратор BOSCH-BFG 3000
+                  </h4>
+                  <span>
+                    22500 ₽
+                  </span>
+                  <a href="" class="btn btn--special">15500 ₽</a>
                 </li>
-                <li>
-                  <a href="">
-                    2
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    3
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    4
-                  </a>
-                </li>
+                <li class="catalog__item">
+                  <div>
+                    <picture>
+                      <source type="image/webp"
+                        srcset="img/catalog/bosch-bfg-6000-2x.webp 2x, img/catalog/bosch-bfg-6000-1x.webp 1x">
+                      <!-- 1x: 216x180; 2x: 432x360 -->
+                      <img loading="lazy" width="216" height="180" srcset="img/catalog/bosch-bfg-6000-2x.png 2x"
+                        src="img/catalog/bosch-bfg-6000-1x.png" alt="bosch-bfg-6000">
+                    </picture>
+                    <div class="catalog__controls">
+                      <button class="btn btn--green">
+                        купить
+                      </button>
+                      <button class="btn btn--greenborder">
+                        в закладки
+                      </button>
+                    </div>
+                  </div>
 
-                <!-- <a href="" class="btn">показать еще</a> -->
+                  <h4>
+                    Перфоратор BOSCH-BFG 6000
+                  </h4>
+                  <span>
+                    22500 ₽
+                  </span>
+                  <a href="" class="btn btn--special">15500 ₽</a>
+                </li>
+                <li class="catalog__item catalog__item--new">
+                  <div>
+                    <picture>
+                      <source type="image/webp"
+                        srcset="img/catalog/bosch-bfg-2000-2x.webp 2x, img/catalog/bosch-bfg-2000-1x.webp 1x">
+                      <!-- 1x: 216x180; 2x: 432x360 -->
+                      <img loading="lazy" width="216" height="180" srcset="img/catalog/bosch-bfg-2000-2x.png 2x"
+                        src="img/catalog/bosch-bfg-2000-1x.png" alt="bosch-bfg-2000">
+                    </picture>
+                    <div class="catalog__controls">
+                      <button class="btn btn--green">
+                        купить
+                      </button>
+                      <button class="btn btn--greenborder">
+                        в закладки
+                      </button>
+                    </div>
+                  </div>
 
+                  <h4>
+                    Перфоратор BOSCH-BFG 2000
+                  </h4>
+                  <span>
+                    22500 ₽
+                  </span>
+                  <a href="" class="btn btn--special">15500 ₽</a>
+                </li>
+                <li class="catalog__item">
+                  <div>
+                    <picture>
+                      <source type="image/webp"
+                        srcset="img/catalog/bosch-bfg-1000-2x.webp 2x, img/catalog/bosch-bfg-1000-1x.webp 1x">
+                      <!-- 1x: 216x180; 2x: 432x360 -->
+                      <img loading="lazy" width="216" height="180" srcset="img/catalog/bosch-bfg-1000-2x.png 2x"
+                        src="img/catalog/bosch-bfg-1000-1x.png" alt="bosch-bfg-1000">
+                    </picture>
+                    <div class="catalog__controls">
+                      <button class="btn btn--green">
+                        купить
+                      </button>
+                      <button class="btn btn--greenborder">
+                        в закладки
+                      </button>
+                    </div>
+                  </div>
+
+                  <h4>
+                    Перфоратор BOSCH-BFG 1000
+                  </h4>
+                  <span>
+                    22500 ₽
+                  </span>
+                  <a href="" class="btn btn--special">15500 ₽</a>
+                </li>
+                <li class="catalog__item catalog__item--new">
+                  <div>
+                    <picture>
+                      <source type="image/webp"
+                        srcset="img/catalog/bosch-bfg-4000-2x.webp 2x, img/catalog/bosch-bfg-4000-1x.webp 1x">
+                      <!-- 1x: 216x180; 2x: 432x360 -->
+                      <img loading="lazy" width="216" height="180" srcset="img/catalog/bosch-bfg-4000-2x.png 2x"
+                        src="img/catalog/bosch-bfg-4000-1x.png" alt="bosch-bfg-4000">
+                    </picture>
+                    <div class="catalog__controls">
+                      <button class="btn btn--green">
+                        купить
+                      </button>
+                      <button class="btn btn--greenborder">
+                        в закладки
+                      </button>
+                    </div>
+                  </div>
+
+                  <h4>
+                    Перфоратор BOSCH-BFG 4000
+                  </h4>
+                  <span>
+                    22500 ₽
+                  </span>
+                  <a href="" class="btn btn--special">15500 ₽</a>
+                </li>
+                <li class="catalog__item">
+                  <div>
+                    <picture>
+                      <source type="image/webp"
+                        srcset="img/catalog/bosch-bfg-5000-2x.webp 2x, img/catalog/bosch-bfg-5000-1x.webp 1x">
+                      <!-- 1x: 216x180; 2x: 432x360 -->
+                      <img loading="lazy" width="216" height="180" srcset="img/catalog/bosch-bfg-5000-2x.png 2x"
+                        src="img/catalog/bosch-bfg-5000-1x.png" alt="bosch-bfg-5000">
+                    </picture>
+                    <div class="catalog__controls">
+                      <button class="btn btn--green">
+                        купить
+                      </button>
+                      <button class="btn btn--greenborder">
+                        в закладки
+                      </button>
+                    </div>
+                  </div>
+
+                  <h4>
+                    Перфоратор BOSCH-BFG 5000
+                  </h4>
+                  <span>
+                    22500 ₽
+                  </span>
+                  <a href="" class="btn btn--special">15500 ₽</a>
+                </li>
               </ul>
-              <button class="btn">показать еще</button>
-            </div>
+              <div class="shop__pagination">
+                <ul class="pagination">
+                  <li>
+                    <a href="">
+                      1
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      2
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      3
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      4
+                    </a>
+                  </li>
 
+                  <!-- <a href="" class="btn">показать еще</a> -->
+
+                </ul>
+                <button class="btn">показать еще</button>
+              </div>
+
+            </div>
           </div>
-        </div>
 
       </section>
 

@@ -1,68 +1,82 @@
-.range-slide {
+.range {
+  margin-bottom: 30px;
+}
+.range__block {
   position: relative;
- 
-  height: 4px;
-  width: 240px;
+background: #F7F3EC;
+  height: 40px;
+  width: 220px;
+border-radius: 2px;
+
+  margin-bottom: 6.3px;
 }
 
-.slide {
+.range__slide {
+
   position: absolute;
-  top: 0;
-  height: 4px;
-  background: #ccc;
-  left: 9px;
+  width:80%;
+  top: 50%;
+  height: 2px;
+  background: $color-basic-grey;
+  left: 20px;
   right: 9px;
 }
 
-.line {
+.range__line {
   position: absolute;
+  width: 139px;
   left: 0;
   right: 0;
   top: 0;
-  height: 4px;
-  background-color: red;
+  height: 2px;
+  background-color: $color-basic-green-hover
 }
 
-.thumb {
+.range__thumb {
   position: absolute;
   z-index: 2;
-  text-align: left;
-  border: 1px solid red;
-  background-color: #4ee44e;
+  // text-align: left;
+  border: 2px solid $color-basic-grey;
+  background-color: $color-default-white;
   border-radius: 50%;
   outline: none;
   top: -7px;
   height: 18px;
   width: 18px;
   margin-left: -9px;
+  &:last-of-type {
+    left:80%;
+  }
 }
 
+
+.range__display {
+  position: relative;
+  width: 220px;
+  height: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap:30px;
+
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 4%;
+    height: 1%;
+    background-color: $color-basic-grey-click;
+    top: 50%;
+    left: 48%;
+  }
+  span {
+    font-family: 'PT Sans Regular';
+    background: #F7F3EC;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 8px;
+    border-radius: 2px;
+  }
+}
 input {
-  -webkit-appearance: none;
-  appearance: none;
-  position: absolute;
-  pointer-events: none;
-  z-index: 3;
-  height: 3px;
-  top: 0;
-  width: 100%;
-  opacity: 0;
-  margin: 0;
-}
-
-input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  pointer-events: all;
-  border-radius: 50%;
-  cursor: pointer;
-  width: 18px;
-  height: 18px;
-}
-
-.display {
-  
-  width: 240px;
-  display: flex;
-  justify-content: space-between;
+  @include visually-hidden();
 }
