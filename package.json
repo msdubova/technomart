@@ -53,6 +53,6 @@
     "duplicate-package-checker-webpack-plugin": "3.0.0"
   },
   "dependencies": {
-    "swiper": "^9.0.2"
+    "swiper": "^9.0.5"
   }
 }

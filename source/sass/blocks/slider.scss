@@ -1,0 +1,79 @@
+.slider {
+  width: 100%;
+  position: relative;
+  ;
+
+}
+
+.slider__item {
+  width: 100%;
+
+  background-size: cover;
+
+  &--first {
+    background-color: rebeccapurple;
+    background-image: url("../../img/backgrounds/slide1-2x.webp");
+
+  }
+
+  &--second {
+    background-color: forestgreen;
+    background-image: url("../../img/backgrounds/slide2-2x.webp");
+  }
+
+  &--third {
+    background-color: navy;
+    background-image: url("../../img/backgrounds/slide3-2x.webp");
+  }
+
+}
+
+
+.slider__button {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  margin-bottom: 0;
+  width: 195px;
+  z-index: 10;
+}
+
+.slider__pagination {
+  span {
+    background-color: $color-special-yellowlight;
+    opacity: 1;
+  }
+
+  [aria-current]:not([aria-current="false"]) {
+    background-color: $color-default-white;
+  }
+}
+
+
+.slider__nav {
+  opacity: 0.8;
+  width: 50px;
+  height: 50px;
+  background-color: $color-basic-grey-click;
+  border-radius: 50%;
+
+  &::after {
+    display: none;
+  }
+
+  &::before {
+    width: 20px;
+    height: 20px;
+    content: " ";
+    position: absolute;
+    background-image: url("../../img/sprite/icon-arrow.svg")
+  }
+
+  ;
+
+  &--next {
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -92,8 +92,9 @@
       background-image: url("../../img/sprite/icon-equipment.svg");
     }
 
-    &--range__slider {
+    &--range {
       grid-area: post-4;
+      padding: 0;
     }
 
     &--reduces {

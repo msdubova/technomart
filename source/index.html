@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
 <head>
   <meta charset="UTF-8" />
@@ -166,28 +172,29 @@
             </a>
           </li>
           <!-- range__slider main container -->
-          <li class="main__item main__item--range__slider main__range__slider swiper">
+          <li class="main__item main__item--range swiper slider">
+            
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper ">
+                <!-- Slides -->
+                <div class="swiper-slide slider__item slider__item--first">Slide 1</div>
+                <div class="swiper-slide slider__item slider__item--second">Slide 2</div>
+                <div class="swiper-slide slider__item slider__item--third">Slide 3</div>
+                ...
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination slider__pagination">
 
+              </div>
+            
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev slider__nav slider__nav--prev"></div>
+              <div class="swiper-button-next slider__nav slider__nav--next"></div>
+            
+              
+            
 
-            <!-- Additional required wrapper -->
-            <div class="swiper-container">
-              <!-- range__slides -->
-              <div class="swiper-range__slide">range__slide 1</div>
-              <div class="swiper-range__slide">range__slide 2</div>
-              <div class="swiper-range__slide">range__slide 3</div>
-
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev">x</div>
-            <div class="swiper-button-next">x</div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar">xxx</div>
-
-            <button class="btn">
+            <button class="btn slider__button">
               Открыть каталог
             </button>
           </li>
@@ -694,6 +701,32 @@
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
+  <script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+  
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+  </script>
 </body>
 
 </html>
