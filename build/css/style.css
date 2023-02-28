@@ -937,6 +937,10 @@ button,
   border-radius: 2px;
 }
 
+.map {
+  height: 347px;
+}
+
 .btn {
   font-weight: 700;
   font-size: 14px;
