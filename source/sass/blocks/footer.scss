@@ -3,7 +3,7 @@
   color: $color-default-white;
 
   a {
-    color: $color-special-yellowlight;
+    color: $color-default-white;
   }
 
 
@@ -35,6 +35,11 @@
 
   :last-child {
     margin-left: auto;
+    a{
+      color: $color-special-yellowlight;
+      padding: 4px;
+      cursor: pointer;
+    }
   }
 
 
@@ -42,10 +47,7 @@
 
 .footer__column {
 
-  p {
-    text-align: right;
-
-  }
+ 
 
   label {
     display: block;
@@ -67,4 +69,23 @@
 
 
   }
+
+  a {
+    width: fit-content;
+  }
+
+
+  &:last-of-type {
+     p {
+    text-align: right;
+
+  }
+
+  a {
+    margin-left: auto;
+    color: $color-special-yellowlight;
+  }
+  }
 }
+
+

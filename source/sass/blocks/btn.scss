@@ -7,6 +7,7 @@
   &:active {
     background-color: $color-basic-red-click;
   }
+  font-family: "PT Sans Bold";
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
@@ -58,7 +59,7 @@
   }
 
   &--special {
-  
+ 
     background-color: inherit;
     background-image: url("../../img/svg/shape.svg");
     display: block;

@@ -37,6 +37,7 @@
   flex-direction: column;
 
   & button {
+    font-family: "PT Sans Bold";
     &:hover {
       outline: none;
     }
@@ -55,4 +56,9 @@
   .catalog__controls {
     display: flex;
   }
+
+  .catalog__button {
+    z-index: 4;
+  }
+  
 }
